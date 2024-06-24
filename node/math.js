@@ -1,8 +1,8 @@
-const sum =(a,b)=> a+b;
-const mul = (a,b) =>a*b;
-const g =9.8; 
-const gp =9.8; 
-const pi =9.8; 
+// const sum =(a,b)=> a+b;
+// const mul = (a,b) =>a*b;
+// const g =9.8; 
+// const gp =9.8; 
+// const pi =9.8; 
  
 //let obj={
     //     sum:sum(7,8),
@@ -39,6 +39,8 @@ const pi =9.8;
 // exports.g =9.8; 
 // exports.gp =9.8; 
 // exports.pi =9.8; 
+
+
     
     
 
