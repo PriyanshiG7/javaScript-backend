@@ -5,12 +5,12 @@ const app = express();
 
 // const path = require('path');
 
-app.use(express.static(path.join(__dirname, "node/EJSDir")));
+// app.use(express.static(path.join(__dirname, "node/EJSDir")));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Middleware to serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, '/node/EJSDir')));
 
 app.get('/', (req, res) => {
     res.render("instagram.ejs");
