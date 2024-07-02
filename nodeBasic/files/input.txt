@@ -1,0 +1,17 @@
+synchronous and asynchronous nature  of node js
+
+synchronous means : each statement of that program will be executed line by line the order which have been written
+and if any task take long time in its execution then the next line of code will wait for its execution 
+
+asynchronous means :and if any task take long time in its execution then the next line of code will not wait for its execution in background it will loaded that line which will take time and  it did not block  the next line of code execution 
+
+# ex :
+let fs=require('fs);
+fs.readfile('./input.txt,'utf-8',(err,data)=>{
+    console,log(data);
+});
+console.log('reading file...);
+
+
+node js provide some API'S  run asynchronously in the background it does not get executed in the main thread ,
+it gets executed in background and does not block the main thread so the next line of  code can be executed without getting block

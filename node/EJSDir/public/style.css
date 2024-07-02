@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>instagram</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-     
-
-<style>
-    body {
+body {
     font-family: Arial, sans-serif;
     background-color: #fafafa;
     color: #262626;
@@ -104,43 +91,3 @@
     border-radius: 4px;
     cursor: pointer;
 }
-
-</style>
-
-
-
-
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Instagram</h1>
-        </div>
-        <div class="profile">
-            <div class="profile-picture">
-                <img src="/pdweb.jpg" alt="Profile Picture">
-            </div>
-            <div class="profile-details">
-                <h2>priyanshig._7</h2>
-                <button>Follow</button>
-                <p>9 posts 157 followers 155 following</p>
-                <p class="bio">
-                    _प्रियांशी गर्ग <span class="heart">🖤</span><br>
-                    ▪ !! राधे राधे !!
-                </p>
-            </div>
-        </div>
-        <div class="private-message">
-            <p>This Account is Private</p>
-            <p>Already follow priyanshig._7? <a href="#">Log in</a> to see their photos and videos.</p>
-        </div>
-        <div class="footer">
-            <p>Log into Instagram</p>
-            <button>Log in</button>
-            <button>Sign up</button>
-        </div>
-    </div>
-</body>
-<!-- <script src="/node/EJSDir/ins.js"></script> -->
-
-</html>
