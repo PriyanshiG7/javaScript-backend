@@ -146,4 +146,168 @@ clearInterval(printHello);
 },12000);
 
 
+// array methods :1 forEach (normal function)
 
+let arr=[1,2,3,4,5];
+arr.forEach(function(el){
+    console.log(el);
+});
+
+//(Arrow function)
+let arr1=["a","b","c","d","e","f","g",];
+arr1.forEach((el) => {
+    console.log(el);
+});
+
+// for each method for an array of object
+let objArr = [
+    {name: "John", age: 25}, 
+    {name: "Alice", age: 30}, 
+    {name: "Bob", age: 20}
+];
+objArr.forEach(function(obj) {
+    console.log(obj, obj.age);
+});
+
+// array methods :2 map method
+
+let arr2=[1,2,3,4,5];
+let squareArr = arr2.map(function(el){
+    return el*el;
+});
+console.log(squareArr);
+console.log(arr2);
+
+// map method for an array of object
+
+let objArr1 = [
+    {name: "John", age: 25}, 
+    {name: "Alice", age: 30}, 
+    {name: "Bob", age: 20}
+];
+
+let newObjArr = objArr1.map(function(obj) {
+    return {name: obj.name.toUpperCase(), age: obj.age};
+});
+console.log(newObjArr);
+
+//(Arrow function) uppercase method 
+
+let arr3=["a","b","c","d","e","f","g",];
+let newArr = arr3.map((el) => {
+    return el.toUpperCase();
+});
+console.log(newArr);
+
+// array methods :3 filter method
+
+let arr4=[1,2,3,4,5,6,7,8,9,10];
+let evenArr = arr4.filter(function(el){
+    return el%2===0;
+});
+console.log("Filter even numbers from an array are : ", evenArr);
+
+
+// array with object in filter array
+let objArr2 = [
+    {name: "John", age: 25}, 
+    {name: "Alice", age: 30}, 
+    {name: "Bob", age: 20}
+];
+
+let youngObjArr = objArr2.filter(function(obj){
+    // return obj.age<25;
+    return obj.age>=25 && obj.age<=30;  // print only objects that are between 25 and 30 years old
+    //return obj.name;
+   });
+console.log("Filter young objects from an array are : ", youngObjArr);
+
+// array methods :4 every method
+
+let arr5=[1,2,3,4,5,6,7,8,9,10];
+let isAllEven = arr5.every(function(el){
+    return el%2===0;
+});
+console.log("Is all numbers in array even?", isAllEven);
+
+console.log("all element in given array are even", [2,4].every((el)=>(el%2==0)))
+
+// array with object in every array
+
+let objArr3 = [
+    {name: "John", age: 25}
+];
+let isAllAdult = objArr3.every(function(obj){
+    return obj.age=25;
+});
+console.log("Is all objects in array adult?", isAllAdult);
+
+// array methods :5 Sum method
+
+let ajay = [1, 2, 3, 4, 5];
+console.log("Sum method; ", ajay.some((el)=>{
+    return el<1;
+    
+}));
+console.log([1, 2, 3, 4, 5].some((el)=>(el>3)));
+
+console.log([1, 2, 3, 4, 5].some((el)=>(el%2==0)));
+
+// array with object in some array
+
+let objArr4 = [
+    {name: "John", age: 25}, 
+    {name: "Alice", age: 30}, 
+    {name: "Bob", age: 20}
+];
+
+console.log("some array object: ",objArr4.some(function(obj){
+    return obj.age>=25;
+}));
+
+// array methods :6 reduce method
+
+let arr6=[1,2,3,4,5];
+let sum = arr6.reduce(function(accumulator, currentValue){
+    console.log(accumulator);
+    return accumulator + currentValue;
+},0);
+console.log("Sum of array elements : ", sum);
+
+// array of object  using reduce method : 
+
+let arr7=[{name:"John", age:25}, {name:"Alice", age:30}, {name:"Bob", age:28}];
+let totalAge = arr7.reduce(function(accumulator, currentValue){
+    console.log(accumulator);
+    return accumulator + currentValue.age;
+},0);
+console.log("Total age of all objects : ", totalAge);
+
+
+// finding maximum in array :
+
+let arr8=[1,2,3,4,5,9,8];
+let result = arr8.reduce((max, el) =>{
+if(el>max){
+    return el;
+}else {
+    return max;
+}
+})
+console.log("Maximum number in array : ", result);
+
+let arr10=[99,77,44,33,100];
+let max=-1;
+for(let i=0;i<arr10.length; i++){
+    if (max< arr10[i]){
+        max=arr10[i];
+    }
+}
+console.log("Maximum number in array : ", max);
+
+// default parameters: given the default value to the argument
+const add1= (a,b=4)=>(
+    a+b
+);
+console.log("Addition is ",add1(2));//output 6
+console.log("Addition is ",add1(2,8)); //output 10
