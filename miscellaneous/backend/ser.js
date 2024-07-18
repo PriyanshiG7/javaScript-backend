@@ -311,3 +311,40 @@ const add1= (a,b=4)=>(
 );
 console.log("Addition is ",add1(2));//output 6
 console.log("Addition is ",add1(2,8)); //output 10
+
+// spread
+let name = "test";
+console.log(name);
+console.log(...name);
+
+let ind = [1,2,3];
+console.log(ind);
+console.log(...ind);
+
+let objArr11=[9,0,8,6];
+let objArrArr={...objArr11}
+console.log(objArrArr);
+
+
+// factory function
+function checkGen(person1Age , person2Age){
+    let details={
+        person1: person1Age,
+        person2: person2Age,
+        test(){
+            if(this.person1 === this.person2)
+                return `person1 ${this.person1} and person2 ${this.person2} are of same age`;
+            else if(this.person1 > this.person2)
+                return `person1 ${this.person1} is older than person2 ${this.person2}`;
+            else
+                return `person1 ${this.person1} is younger than person2${this.person2}`;
+        }
+    };
+    return details;
+
+}
+let genCheck1 = checkGen(20 , 20);
+console.log(genCheck1.test());
+
+let genCheck2 = checkGen(25 , 15);
+console.log(genCheck2.test());
